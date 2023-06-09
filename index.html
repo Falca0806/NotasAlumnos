@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de notas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script defer src="js/index.js"></script>
+</head>
+<body>
+  <br>
+  <h3 style="text-align: center;">REGISTRO DE ALUMNOS</h3>
+    <form class="form" id='form' autocomplete="off" style="text-align: center;">
+      <label class=" mb-2 border-bottom border-primary">Cédula:</label>
+        <input class="border-primary" type="text" title="cedula" name="cedula" id="cedula" maxlength="10" required onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+        <br>
+      <label class="mb-2 border-bottom border-primary">Nombre del alumno</label>
+        <input class="border-primary" type="text" title="nombre" name="nombre" id="nombre" maxlength="30" pattern="[a-zA-Z]+" required onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))">
+        <br>
+      <label class="mb-2 border-bottom border-primary">Nota de Matemática</label>
+        <select class="border-primary" name="matematica" title="matematica" id="matematica" required>
+          <option value="0">00</option>
+          <option value="1">01</option>
+          <option value="2">02</option>
+          <option value="3">03</option>
+          <option value="4">04</option>
+          <option value="5">05</option>
+          <option value="6">06</option>
+          <option value="7">07</option>
+          <option value="8">08</option>
+          <option value="9">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+         </select>
+        <br>
+        <label class="mb-2 border-bottom border-primary">Nota de Física</label>
+        <select class="border-primary" name="fisica" title="fisica" id="fisica" required>
+          <option value="0">00</option>
+          <option value="1">01</option>
+          <option value="2">02</option>
+          <option value="3">03</option>
+          <option value="4">04</option>
+          <option value="5">05</option>
+          <option value="6">06</option>
+          <option value="7">07</option>
+          <option value="8">08</option>
+          <option value="9">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+         </select>
+        <br>
+        <label class="mb-2 border-bottom border-primary">Nota de Programación</label>
+        <select class="border-primary" name="programacion" title="programacion" id="programacion" required>
+          <option value="0">00</option>
+          <option value="1">01</option>
+          <option value="2">02</option>
+          <option value="3">03</option>
+          <option value="4">04</option>
+          <option value="5">05</option>
+          <option value="6">06</option>
+          <option value="7">07</option>
+          <option value="8">08</option>
+          <option value="9">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+         </select>
+         <br>
+         <br>
+        <div class="row-col-6">
+          <button id="btn" class="btn btn-primary" type="button" onclick="guardarDatos()">Guardar</button>
+          <button id="btn1" class="btn btn-warning" type="button" value="Limpiar" onclick="reset()">Limpiar</button>
+        </div>
+    </form>
+    <br>
+    <div class="m-3" style="text-align: left;">
+      <h2 class="border-bottom border-success">RESULTADOS</h2>
+        <p id="respuestaMate"></p>
+        <p id="respuestaFis"></p>
+        <p id="respuestaProg"></p>
+        <p id="aprobadosMate"></p>
+        <p id="reprobadosMate"></p>
+        <p id="aprobadosFisica"></p>
+        <p id="reprobadosFisica"></p>
+        <p id="aprobadosProg"></p>
+        <p id="reprobadosProg"></p>
+        <p id="aproboTodas"></p>
+        <p id="aproboDos"></p>
+        <p id="aproboUna"></p>
+        <p id="maxMat"></p>
+        <p id="maxFis"></p>
+        <p id="maxProg"></p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
